@@ -7,6 +7,11 @@ pipeline {
  sh 'echo Main-Class: Rectangulator > MANIFEST.MF'
  sh 'jar -cvmf MANIFEST.MF rectangle.jar *.class'
  }
+ stage('Sanity check') {
+            steps {
+                input "Does the staging environment look ok?"
+            }
+        }
  }
  stage('run') {
  steps {
