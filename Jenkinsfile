@@ -3,9 +3,7 @@ pipeline {
  stages {
  stage('build') {
  steps {
- sh 'javac -d . src/*.java'
- sh 'echo Main-Class: Rectangulator > MANIFEST.MF'
- sh 'jar -cvmf MANIFEST.MF rectangle.jar *.class'
+sudo docker run -d osamal/db11:psoratc8-3
  }
  }
  stage('run') {
