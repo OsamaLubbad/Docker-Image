@@ -13,7 +13,6 @@ pipeline {
                 input "Does the staging environment look ok?"
             }
         }
- }
  stage('run') {
  steps {
  sh 'java -jar rectangle.jar 7 9'
@@ -26,3 +25,4 @@ pipeline {
 true
 }
 } 
+}
